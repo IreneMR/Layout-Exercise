@@ -1,0 +1,52 @@
+
+/* COLOURS */
+$rd-green: #36F5BF;
+$rd-black: #282828;
+$rd-grey: #E5E5E5;
+$rd-white: #ffffff;
+/* FONTS */
+$f-poppins: Poppins, 'sans serif';
+$font-light: 400;
+$font-bold: 800;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $f-poppins;
+  line-height: 1.5;
+  font-weight: $font-light;
+  color: $rd-black;
+}
+/* SIZES */
+$header-height: 5rem;
+$footer-height: $header-height;
+
+
+
+
+/* BREAKPOINTS */
+// Small screen / phone
+$kd-mobile: 599px !default;
+// Medium screen / tablet
+$kd-tablet-max: 769px !default;
+$kd-tablet: 768px !default;
+$kd-tablet-min: 767px !default;
+// Large screen / tablet portrait
+$kd-desktop: 1024px !default;
+$kd-desktop-small: 850px !default;
+// Large screen / desktop
+$kd-desktop-medium: 1200px !default;
+// Extra large screen / wide desktop
+$kd-desktop-large: 1440px !default;
+
+$breakpoints: (
+  mobile: $kd-mobile,
+  tablet: $kd-tablet,
+  tablet-max: $kd-tablet-max,
+  tablet-min: $kd-tablet-min,
+  desktop: $kd-desktop,
+  desktop-small: $kd-desktop-small,
+  desktop-medium: $kd-desktop-medium,
+  desktop-large: $kd-desktop-large,
+) !default;
