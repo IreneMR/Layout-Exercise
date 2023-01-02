@@ -52,5 +52,5 @@ export default class Hero extends Vue {
 }
 </script>
 <style lang="scss" scoped>
-@import "assets/components/hero.scss";
+@import "../assets/components/hero";
 </style>

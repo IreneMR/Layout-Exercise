@@ -12,5 +12,5 @@ export default class Footer extends Vue {
 }
 </script>
 <style lang="scss" scoped>
-@import "assets/components/footer.scss";
+@import "../assets/components/footer";
 </style>

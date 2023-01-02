@@ -42,6 +42,6 @@ export default class Header extends Vue {
 }
 </script>
 <style lang="scss" scoped>
-@import "assets/components/header.scss";
+@import "../assets/components/header";
 </style>
 
