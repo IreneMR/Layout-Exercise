@@ -1,5 +1,15 @@
-.navbar {
+@import "../base/base";
+.footer {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  background-color: $rd-green;
+  color: $rd-white;
+  height: $footer-height;
+  &__wrapper {
+    @include wrapper(85%, rem(1200));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

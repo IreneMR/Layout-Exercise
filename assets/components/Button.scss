@@ -1,0 +1,17 @@
+@import "../base/base";
+.button {
+  border: 1px solid currentColor;
+  height: rem(59);
+  &__text {
+    font-size: rem(18);
+    font-weight: normal;
+  }
+  &.green {
+    background-color: $rd-green;
+    color:  $rd-black;
+  }
+  &.black {
+    background-color: $rd-black;
+    color: $rd-grey;
+  }
+}

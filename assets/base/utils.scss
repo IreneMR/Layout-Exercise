@@ -1,4 +1,6 @@
-
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
 /* COLOURS */
 $rd-green: #36F5BF;
 $rd-black: #282828;
@@ -8,6 +10,10 @@ $rd-white: #ffffff;
 $f-poppins: Poppins, 'sans serif';
 $font-light: 400;
 $font-bold: 800;
+/* SIZES */
+$header-height: 5rem;
+$footer-height: $header-height;
+
 html {
   scroll-behavior: smooth;
 }
@@ -18,35 +24,104 @@ body {
   font-weight: $font-light;
   color: $rd-black;
 }
-/* SIZES */
-$header-height: 5rem;
-$footer-height: $header-height;
-
-
-
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex-grow: 1;
+}
 
 /* BREAKPOINTS */
 // Small screen / phone
-$kd-mobile: 599px !default;
+$rd-mobile: 599px !default;
 // Medium screen / tablet
-$kd-tablet-max: 769px !default;
-$kd-tablet: 768px !default;
-$kd-tablet-min: 767px !default;
+$rd-tablet-max: 769px !default;
+$rd-tablet: 768px !default;
+$rd-tablet-min: 767px !default;
 // Large screen / tablet portrait
-$kd-desktop: 1024px !default;
-$kd-desktop-small: 850px !default;
+$rd-desktop: 1024px !default;
+$rd-desktop-small: 850px !default;
 // Large screen / desktop
-$kd-desktop-medium: 1200px !default;
+$rd-desktop-medium: 1200px !default;
 // Extra large screen / wide desktop
-$kd-desktop-large: 1440px !default;
+$rd-desktop-large: 1440px !default;
 
 $breakpoints: (
-  mobile: $kd-mobile,
-  tablet: $kd-tablet,
-  tablet-max: $kd-tablet-max,
-  tablet-min: $kd-tablet-min,
-  desktop: $kd-desktop,
-  desktop-small: $kd-desktop-small,
-  desktop-medium: $kd-desktop-medium,
-  desktop-large: $kd-desktop-large,
+  mobile: $rd-mobile,
+  tablet: $rd-tablet,
+  tablet-max: $rd-tablet-max,
+  tablet-min: $rd-tablet-min,
+  desktop: $rd-desktop,
+  desktop-small: $rd-desktop-small,
+  desktop-medium: $rd-desktop-medium,
+  desktop-large: $rd-desktop-large,
 ) !default;
+/* ICONS */
+@mixin icon-styles ($icon-size, $icon-url) {
+  .icon {
+    font-style: normal;
+    vertical-align: middle;
+    cursor: pointer;
+    &--button::before {
+      display: inline-block;
+      content: "";
+      width: $icon-size;
+      height: $icon-size;
+      background: url($icon-url) no-repeat;
+      vertical-align: middle;
+    }
+  }
+}
+
+@mixin icon-font-styles() {
+  font-family: '#{$rd-icon-font-family}';
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 1rem;
+  display: inline-block;
+  /* Better Font Rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/* FONTS */
+// Font face import
+
+@mixin font-face($family, $filename, $style, $weight){
+  @font-face {
+    font-family: $family;
+    src: url('~/assets/fonts/#{$filename}.woff') format("woff");
+    src: url('~/assets/fonts/#{$filename}.woff2') format("woff2");
+    src: url('~/assets/fonts/#{$filename}.ttf') format("truetype");
+    font-style: $style;
+    font-weight: $weight;
+  }
+}
+@mixin font($ff, $fs, $fw, $lh: inherit) {
+  font-family: $ff;
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+/* REM */
+$base-fontsize: 16;
+// PIXEL TO REM: height: rem(50) -> 3.125rem;
+@function rem($px, $context: $base-fontsize) {
+  @return ($px / $context) * 1rem;
+}
+
+//WRAPPERS: Center and max-width body.
+@mixin wrapper($width: 100%, $max-width: 100%) {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $max-width;
+  width: $width;
+}

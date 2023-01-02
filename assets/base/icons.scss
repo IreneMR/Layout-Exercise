@@ -1,0 +1,23 @@
+.icon {
+  @include icon-font-styles();
+}
+.icon-arrow {
+  &:before {
+    content: $icon-arrow;
+  }
+}
+.icon-logo {
+  &:before {
+    content: $icon-logo;
+  }
+}
+.icon-name {
+  &:before {
+    content: $icon-name;
+  }
+}
+.icon-menu {
+  &:before {
+    content: $icon-menu;
+  }
+}
