@@ -1,0 +1,52 @@
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+/* COLOURS */
+$rd-green: #36f5bf;
+$rd-black: #282828;
+$rd-grey: #e5e5e5;
+$rd-white: #ffffff;
+
+/* FONTS */
+$f-poppins: Poppins, 'sans serif';
+$font-light: 400;
+$font-bold: 800;
+
+/* SIZES */
+$header-height: 5rem;
+$footer-height: $header-height;
+
+/* Z-INDEX */
+$z-below: 0;
+$z-content: 1;
+$z-above: 2;
+$z-menu: 5;
+
+/* REM */
+$base-fontsize: 16;
+
+/* BREAKPOINTS */
+// Small screen / phone
+$rd-mobile: 599px !default;
+// Medium screen / tablet
+$rd-tablet-max: 769px !default;
+$rd-tablet: 768px !default;
+$rd-tablet-min: 767px !default;
+// Large screen / tablet portrait
+$rd-desktop: 1024px !default;
+$rd-desktop-small: 850px !default;
+// Large screen / desktop
+$rd-desktop-medium: 1200px !default;
+// Extra large screen / wide desktop
+$rd-desktop-large: 1440px !default;
+
+$breakpoints: (
+  mobile: $rd-mobile,
+  tablet: $rd-tablet,
+  tablet-max: $rd-tablet-max,
+  tablet-min: $rd-tablet-min,
+  desktop: $rd-desktop,
+  desktop-small: $rd-desktop-small,
+  desktop-medium: $rd-desktop-medium,
+  desktop-large: $rd-desktop-large,
+) !default;

@@ -1,0 +1,106 @@
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/* ICONS */
+@mixin icon-styles($icon-size, $icon-url) {
+  .icon {
+    font-style: normal;
+    vertical-align: middle;
+    cursor: pointer;
+    &--button::before {
+      display: inline-block;
+      content: '';
+      width: $icon-size;
+      height: $icon-size;
+      background: url($icon-url) no-repeat;
+      vertical-align: middle;
+    }
+  }
+}
+
+@mixin icon-font-styles() {
+  font-family: '#{$rd-icon-font-family}';
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 1rem;
+  display: inline-block;
+  /* Better Font Rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* FONTS */
+// Font face import
+
+@mixin font-face($family, $filename, $style, $weight) {
+  @font-face {
+    font-family: $family;
+    src: url('~/assets/fonts/#{$filename}.woff') format('woff');
+    src: url('~/assets/fonts/#{$filename}.woff2') format('woff2');
+    src: url('~/assets/fonts/#{$filename}.ttf') format('truetype');
+    font-style: $style;
+    font-weight: $weight;
+  }
+}
+@mixin font($ff, $fs, $fw, $lh: inherit) {
+  font-family: $ff;
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+// PIXEL TO REM: height: rem(50) -> 3.125rem;
+@function rem($px, $context: $base-fontsize) {
+  @return calc(#{$px} / #{$context} * 1rem);
+}
+
+//WRAPPERS: Center and max-width body.
+@mixin wrapper($width: 100%, $max-width: 100%) {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $max-width;
+  width: $width;
+}
+
+//BUBBLE ANIMATION
+@mixin bubble($top, $right, $bottom, $left, $z: $z-above, $animation: bubble) {
+  display: block;
+  position: absolute;
+  opacity: 0.6;
+  animation-name: $animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  z-index: $z;
+
+  @keyframes bubble {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes bubble-left {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateX(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}

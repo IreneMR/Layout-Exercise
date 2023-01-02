@@ -6,11 +6,7 @@
   </div>
 </template>
 <script lang="ts">
-import {Component, Vue} from 'nuxt-property-decorator'
+import { Component, Vue } from 'nuxt-property-decorator'
 @Component
-export default class Footer extends Vue {
-}
+export default class Footer extends Vue {}
 </script>
-<style lang="scss" scoped>
-@import "../assets/components/footer";
-</style>

@@ -14,10 +14,10 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' },
       {
-        rel: "stylesheet",
-        href: 'href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'
+        rel: 'stylesheet',
+        href: 'href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap',
       },
-      ],
+    ],
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -33,16 +33,10 @@ export default {
   ],
 
   styleResources: {
-    scss: [
-      '~/assets/base/utils.scss',
-      '~/assets/base/icons.scss',
-      '~/assets/base/iconVariables.scss',
-    ]
+    scss: ['~/assets/app.scss'],
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '@/assets/app.scss'
-  ],
+  css: ['@/assets/app.scss'],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [],

@@ -1,0 +1,19 @@
+// GLOBAL CLASSES & STYLES
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $f-poppins;
+  line-height: 1.5;
+  font-weight: $font-light;
+  color: $rd-black;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex-grow: 1;
+}

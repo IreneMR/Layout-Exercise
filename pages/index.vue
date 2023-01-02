@@ -9,8 +9,8 @@ import { Component, Vue } from 'nuxt-property-decorator'
 import Hero from '~/components/Hero.vue'
 @Component({
   components: {
-    Hero
-  }
+    Hero,
+  },
 })
 export default class Home extends Vue {}
 </script>

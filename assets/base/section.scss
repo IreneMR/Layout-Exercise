@@ -1,0 +1,17 @@
+.section {
+  padding: 0;
+  h1 {
+    font-size: rem(40);
+    line-height: rem(48);
+  }
+  @media (min-width: $rd-desktop) {
+    padding-top: 1rem;
+    &__wrapper {
+      @include wrapper(85%, rem(1000));
+    }
+    h1 {
+      font-size: rem(64);
+      line-height: rem(75);
+    }
+  }
+}

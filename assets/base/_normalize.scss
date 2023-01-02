@@ -14,16 +14,16 @@ CUSTOM STANDARIZE (standarize.css - https://github.com/barcia/standarize)
  */
 
 :root {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        "Helvetica Neue", Oxygen-Sans, Ubuntu, Cantarell, Arial, sans-serif,
-        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    cursor: default;
-    box-sizing: border-box;
-    /* 1 */
-    -webkit-text-size-adjust: 100%;
-    /* 2 */
-    -webkit-tap-highlight-color: hsla(0, 0%, 0%, 0);
-    /* 3 */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Oxygen-Sans, Ubuntu, Cantarell, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  cursor: default;
+  box-sizing: border-box;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-tap-highlight-color: hsla(0, 0%, 0%, 0);
+  /* 3 */
 }
 
 *,
@@ -31,8 +31,8 @@ CUSTOM STANDARIZE (standarize.css - https://github.com/barcia/standarize)
 *::after,
 *:before,
 *:after {
-    box-sizing: inherit;
-    /* 1 */
+  box-sizing: inherit;
+  /* 1 */
 }
 
 /**
@@ -42,8 +42,8 @@ CUSTOM STANDARIZE (standarize.css - https://github.com/barcia/standarize)
  * Credits: https://github.com/suitcss/base
  */
 
-[tabindex="-1"]:focus {
-    outline: none !important;
+[tabindex='-1']:focus {
+  outline: none !important;
 }
 
 /**
@@ -52,30 +52,30 @@ CUSTOM STANDARIZE (standarize.css - https://github.com/barcia/standarize)
  */
 
 @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* --------------- GROUPING CONTENT --------------- */
 
 pre {
-    overflow-x: auto;
+  overflow-x: auto;
 }
 
 ul,
 ol {
-    list-style-position: inside;
+  list-style-position: inside;
 }
 
 figure {
-    width: 100%;
-    margin: 0;
+  width: 100%;
+  margin: 0;
 }
 
 /* --------------- TEXT-LEVEL SEMANTICS --------------- */
@@ -85,8 +85,8 @@ figure {
  */
 
 abbr[title] {
-    border-bottom: none;
-    text-decoration: underline dotted;
+  border-bottom: none;
+  text-decoration: underline dotted;
 }
 
 /**
@@ -98,20 +98,20 @@ code,
 kbd,
 samp,
 pre {
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
-        monospace;
-    /* 1 */
-    font-size: 0.9em;
-    /* 2 */
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier,
+    monospace;
+  /* 1 */
+  font-size: 0.9em;
+  /* 2 */
 }
 
 b,
 strong {
-    font-weight: bolder;
+  font-weight: bolder;
 }
 
 small {
-    font-size: 0.85em;
+  font-size: 0.85em;
 }
 
 /**
@@ -121,18 +121,18 @@ small {
 
 sub,
 sup {
-    position: relative;
-    font-size: 75%;
-    line-height: 0;
-    vertical-align: baseline;
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
 }
 
 sub {
-    bottom: -0.25em;
+  bottom: -0.25em;
 }
 
 sup {
-    top: -0.5em;
+  top: -0.5em;
 }
 
 /* --------------- EMBEBBED CONTENT --------------- */
@@ -140,14 +140,14 @@ sup {
 img,
 video,
 audio {
-    max-width: 100%;
-    height: auto;
-    -ms-interpolation-mode: bicubic;
-    border-style: none;
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  border-style: none;
 }
 
 iframe {
-    border: 0;
+  border: 0;
 }
 
 /* --------------- FORMS --------------- */
@@ -162,12 +162,12 @@ input,
 optgroup,
 select,
 textarea {
-    margin: 0;
-    /* 2 */
-    font-family: inherit;
-    /* 1 */
-    font-size: 1em;
-    /* 1 */
+  margin: 0;
+  /* 2 */
+  font-family: inherit;
+  /* 1 */
+  font-size: 1em;
+  /* 1 */
 }
 
 /**
@@ -177,8 +177,8 @@ textarea {
 
 button,
 select {
-    /* 1 */
-    text-transform: none;
+  /* 1 */
+  text-transform: none;
 }
 
 /*
@@ -186,10 +186,10 @@ select {
  */
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-    -webkit-appearance: button;
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
 }
 
 /**
@@ -197,17 +197,17 @@ button,
  */
 
 textarea,
-[type="email"],
-[type="password"],
-[type="search"],
-[type="tel"],
-[type="text"],
-[type="url"],
-[type="number"],
-[type="week"],
-[type="datetime"],
+[type='email'],
+[type='password'],
+[type='search'],
+[type='tel'],
+[type='text'],
+[type='url'],
+[type='number'],
+[type='week'],
+[type='datetime'],
 input[list] {
-    -webkit-appearance: button;
+  -webkit-appearance: button;
 }
 
 /**
@@ -215,11 +215,11 @@ input[list] {
  */
 
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-    padding: 0;
-    border-style: none;
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
 }
 
 /**
@@ -227,10 +227,10 @@ button::-moz-focus-inner,
  */
 
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-    outline: 1px dotted ButtonText;
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+  outline: 1px dotted ButtonText;
 }
 
 /**
@@ -238,7 +238,7 @@ button:-moz-focusring,
  */
 
 fieldset {
-    padding: 0.35em 0.75em 0.625em;
+  padding: 0.35em 0.75em 0.625em;
 }
 
 /**
@@ -246,16 +246,16 @@ fieldset {
  */
 
 progress {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-    height: auto;
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto;
 }
 
 /**
@@ -263,19 +263,19 @@ progress {
  * 2. Correct the outline style in Safari.
  */
 
-[type="search"] {
-    outline-offset: -2px;
-    /* 2 */
-    -webkit-appearance: textfield;
-    /* 1 */
+[type='search'] {
+  outline-offset: -2px;
+  /* 2 */
+  -webkit-appearance: textfield;
+  /* 1 */
 }
 
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
 
-[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
 }
 
 /**
@@ -284,10 +284,10 @@ progress {
  */
 
 ::-webkit-file-upload-button {
-    font: inherit;
-    /* 2 */
-    -webkit-appearance: button;
-    /* 1 */
+  font: inherit;
+  /* 2 */
+  -webkit-appearance: button;
+  /* 1 */
 }
 
 /* --------------- CURSORS --------------- */
@@ -297,50 +297,50 @@ code,
 kbd,
 samp,
 var {
-    cursor: text;
+  cursor: text;
 }
 
 abbr[title],
 dfn[title] {
-    cursor: help;
+  cursor: help;
 }
 
 textarea,
-input[type="email"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="url"],
-input[type="number"],
-input[type="datetime"] {
-    cursor: text;
+input[type='email'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='url'],
+input[type='number'],
+input[type='datetime'] {
+  cursor: text;
 }
 
 select {
-    cursor: context-menu;
+  cursor: context-menu;
 }
 
-input[type="range"] {
-    cursor: col-resize;
+input[type='range'] {
+  cursor: col-resize;
 }
 
 [disabled] {
-    cursor: not-allowed !important;
+  cursor: not-allowed !important;
 }
 
 /* --------------- INTERACTIVE --------------- */
 
 summary {
-    display: list-item;
-    outline: 0;
+  display: list-item;
+  outline: 0;
 }
 
 /* --------------- DIANALIZE --------------- */
 
 button {
-    border: none;
-    background-color: transparent;
+  border: none;
+  background-color: transparent;
 }
 
 /* Remove default margin and padding*/
@@ -358,26 +358,26 @@ figcaption,
 blockquote,
 dl,
 dd {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 ul,
 ol {
-    padding: 0;
+  padding: 0;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 /**
  * Avoid problems with event.target
  */
 a > svg {
-    pointer-events: none;
+  pointer-events: none;
 }

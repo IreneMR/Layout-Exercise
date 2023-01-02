@@ -1,4 +1,3 @@
-@import "../base/base";
 .footer {
   display: flex;
   justify-content: space-between;
@@ -6,6 +5,7 @@
   background-color: $rd-green;
   color: $rd-white;
   height: $footer-height;
+
   &__wrapper {
     @include wrapper(85%, rem(1200));
     display: flex;

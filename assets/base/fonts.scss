@@ -1,10 +1,11 @@
 @font-face {
   font-family: '#{$rd-icon-font-family}';
   src: url('assets/fonts/#{$rd-icon-font-family}.eot');
-  src: url('assets/fonts/#{$rd-icon-font-family}.eot') format('embedded-opentype'),
-  url('assets/fonts/#{$rd-icon-font-family}.ttf') format('truetype'),
-  url('assets/fonts/#{$rd-icon-font-family}.woff') format('woff'),
-  url('assets/fonts/#{$rd-icon-font-family}.svg') format('svg');
+  src: url('assets/fonts/#{$rd-icon-font-family}.eot')
+      format('embedded-opentype'),
+    url('assets/fonts/#{$rd-icon-font-family}.ttf') format('truetype'),
+    url('assets/fonts/#{$rd-icon-font-family}.woff') format('woff'),
+    url('assets/fonts/#{$rd-icon-font-family}.svg') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;

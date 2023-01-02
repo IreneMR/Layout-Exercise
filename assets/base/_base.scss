@@ -1,5 +1,9 @@
-@import "normalize";
-@import "utils";
-@import "iconVariables";
-@import "fonts";
-@import "icons";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import 'normalize';
+@import 'variables';
+@import 'mixins';
+@import 'global';
+@import 'section';
+@import 'iconVariables';
+@import 'fonts';
+@import 'icons';

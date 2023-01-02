@@ -1,92 +1,73 @@
-@import "../base/base";
-.section {
-  padding: 0;
-  h1 {
-    font-size: rem(40);
-    line-height: rem(48);
-  }
-  @media (min-width: $rd-desktop) {
-    padding-top: 1rem;
-    &__wrapper {
-      @include wrapper(85%, rem(1000));
-    }
-    h1 {
-      font-size: rem(64);
-      line-height: rem(75);
-    }
-  }
-}
 .hero {
   &__info {
     padding: 0 rem(15) 1rem rem(16);
   }
+
   &__title {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
     position: relative;
     cursor: pointer;
-    .arrow {
-      position: absolute;
-      bottom: 1rem;
-      right: 0;
-      color: $rd-green;
-      transform: rotate(0deg);
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      -o-transition: all 0.3s;
-      transition: all 0.3s;
+
+    &--active {
+      border-bottom: 4px solid $rd-grey;
     }
-    .arrow.up {
+  }
+
+  &__arrow {
+    position: absolute;
+    bottom: 1rem;
+    right: 0;
+    color: $rd-green;
+    transition: transform 0.3s;
+
+    &--up {
       transform: rotate(-180deg);
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      -o-transition: all 0.3s;
-      transition: all 0.3s;
     }
   }
-  &__title.active {
-    border-bottom: 4px solid $rd-grey;
-  }
+
   &__image {
     width: 100%;
-    z-index: 1;
+    z-index: $z-content;
   }
-  .bubble {
+
+  &__bubble {
     display: none;
   }
+
   &__subtitle {
-    display: none;
-    height: 0;
-    opacity : 0;
-    transition: opacity 0.6s;
+    height: auto;
+    max-height: 0;
+    transition: max-height ease 0.3s;
+    overflow: hidden;
+
+    &--active {
+      max-height: rem(300);
+      padding: rem(16) 0 rem(16);
+    }
   }
-  &__subtitle.active {
-    display: block;
-    height: max-content;
-    opacity: 1;
-    transform: translateX(0);
-    -webkit-transition: all 1s;
-    margin: 1rem auto 1rem 0;
-    max-width: 60.5rem;
-    width: 100%;
-  }
+
   &__buttons {
     display: flex;
     justify-content: center;
-    padding-top: 0.6rem;
+    padding-top: rem(10);
     flex-grow: 1;
-    .button:first-child {
+  }
+
+  &__button {
+    flex: 1;
+
+    &:first-child {
       margin-right: rem(30);
     }
-    .button {
-      flex: 1;
-    }
   }
+
   @media (min-width: $rd-desktop) {
     &__info {
       padding-right: 5rem;
     }
+
     &__container {
       position: relative;
       display: flex;
@@ -94,53 +75,27 @@
       align-items: center;
       justify-content: center;
     }
-    .bubble {
-      display: inherit;
-      position: absolute;
-      animation-duration: 2s;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
-      &__1, &__2, &__4 {
-        z-index: 2;
-      }
-      &__1 {
-        top: rem(128);
-        left: 33%;
-        opacity: 0.6;
-        animation-name: bubble;
-      }
-      &__2 {
-        opacity: 0.6;
-        top: rem(72);
-        right: 53%;
-        animation-name: bubble-left;
-      }
-      &__3 {
-        top: -20px;
-        right: 0;
-        z-index: 0;
-        animation-name: bubble;
-      }
-      &__4 {
-        bottom: 22%;
-        right: -4%;
-        opacity: 0.8;
-        animation-name: bubble;
 
-      }
-      @keyframes bubble {
-        0%   { transform: translateY(0); }
-        50%  { transform: translateY(-10px); }
-        100% { transform: translateY(0); }
-      }
-      @keyframes bubble-left {
-        0%   { transform: translateY(0); }
-        50%  { transform: translateX(-10px); }
-        100% { transform: translateY(0); }
-      }
-    }
-    .arrow {
+    &__arrow {
       right: -2.2rem;
+    }
+
+    &__bubble {
+      &--1 {
+        @include bubble(#{rem(128)}, auto, auto, 33%);
+      }
+
+      &--2 {
+        @include bubble(#{rem(72)}, 53%, auto, auto, $z-above, bubble-left);
+      }
+
+      &--3 {
+        @include bubble(#{rem(-20)}, 0, auto, auto, $z-below);
+      }
+
+      &--4 {
+        @include bubble(auto, -4%, 22%, auto);
+      }
     }
   }
 }
