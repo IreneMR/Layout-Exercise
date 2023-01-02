@@ -64,6 +64,9 @@
   }
 
   @media (min-width: $rd-desktop) {
+    padding-top: rem(70);
+    margin-bottom: rem(64);
+
     &__info {
       padding-right: 5rem;
     }
@@ -90,7 +93,7 @@
       }
 
       &--3 {
-        @include bubble(#{rem(-20)}, 0, auto, auto, $z-below);
+        @include bubble(#{rem(-50)}, 0, auto, auto, $z-below);
       }
 
       &--4 {

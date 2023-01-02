@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="header__wrapper">
-      <span class="icon icon-logo header__logo" />
+      <a href="/" class="icon icon-logo header__logo" />
       <nav class="header__nav">
         <span class="icon icon-menu header__menu-icon" @click="showMenu" />
         <ul ref="menu" class="header__menu">

@@ -54,7 +54,7 @@
 
 // PIXEL TO REM: height: rem(50) -> 3.125rem;
 @function rem($px, $context: $base-fontsize) {
-  @return calc(#{$px} / #{$context} * 1rem);
+  @return ($px / $context) * 1rem;
 }
 
 //WRAPPERS: Center and max-width body.
